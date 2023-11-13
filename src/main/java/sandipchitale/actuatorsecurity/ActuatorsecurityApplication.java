@@ -7,19 +7,19 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableWebSecurity
 public class ActuatorsecurityApplication {
 
-	@RestController
+	@Controller
 	public static class IndexController {
 
 	    @GetMapping("/")
 	    public String index() {
-	        return "Hello World";
+	        return "index.html";
 	    }
 	}
 
